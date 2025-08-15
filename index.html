@@ -117,11 +117,10 @@ async def main() -> None:
 
     result = await client.keys.verify_key("prefix_abc123")
 
-    if result.is_ok {
-        print(data.valid);
-    } else {
-        print(result.unwrap_err());
-    }
+    if result.is_ok:
+        print(result.unwrap().valid)
+    else:
+        print(result.unwrap_err())
                 </code>
             </pre>
 
